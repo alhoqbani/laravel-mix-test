@@ -32,7 +32,7 @@
         },
         computed: {
             ...mapGetters({
-                tasks: 'tasks'
+                tasks: 'getTasks'
             })
         },
         methods: {
