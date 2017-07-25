@@ -25,6 +25,7 @@
             }
 
             .full-height {
+                padding-top: 100px;
                 height: 100vh;
             }
 
@@ -68,7 +69,7 @@
         </style>
     </head>
     <body>
-        <div id="app" class="flex-center position-ref full-height">
+        <div id="app" class="position-ref full-height">
             <tasks></tasks>
         </div>
         <script src="{{mix('js/app.js')}}"></script>
