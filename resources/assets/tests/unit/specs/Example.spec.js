@@ -14,6 +14,14 @@ describe('Example.vue', () => {
             .to.contain('I\'m an example component!')
     })
 
+    // Evaluate the results of functions in
+    // the raw component options
+    it('sets the correct default data', () => {
+        // expect(Example.data).be.function
+        const defaultData = Example.data()
+        expect(defaultData.message).to.equal('hello!')
+    })
+
     // Inspect the component instance on mount
     it('correctly sets the message when created', () => {
         const vm = new Vue(Example).$mount()
