@@ -1,7 +1,10 @@
 <template>
     <li class="list-group-item">
         <strong v-text="task.body + task.id"></strong>
-        <span class="glyphicon" :class="Number(task.completed) ? 'glyphicon-ok-circle' : 'glyphicon-remove-circle'"></span>
+        <span class="glyphicon"
+              :class="Number(task.completed) ? 'glyphicon-ok-circle' : 'glyphicon-remove-circle'"
+            @click="toggleStatus(task.id)"
+        ></span>
         <span class="glyphicon glyphicon-remove pull-right" @click="deleteTask(task.id)"></span>
     </li>
 </template>
@@ -14,7 +17,8 @@
         props: ['task'],
         methods: {
             ...mapActions({
-                deleteTask: 'deleteTask'
+                deleteTask: 'deleteTask',
+                toggleStatus: 'toggleStatus'
             }),
         },
     }

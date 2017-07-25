@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +17,7 @@ class TaskController extends Controller
     {
         return Task::all();
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -26,60 +27,71 @@ class TaskController extends Controller
     {
         //
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        return Task::create([
+            'body' => request('body'),
+        ]);
     }
-
+    
     /**
      * Display the specified resource.
      *
-     * @param  \App\Task  $task
+     * @param  \App\Task $task
+     *
      * @return \Illuminate\Http\Response
      */
     public function show(Task $task)
     {
         //
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Task  $task
+     * @param  \App\Task $task
+     *
      * @return \Illuminate\Http\Response
      */
     public function edit(Task $task)
     {
         //
     }
-
+    
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Task  $task
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Task                $task
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Task $task)
     {
-        //
+        $task->completed = ! $task->completed;
+        $task->save();
+        return $task;
     }
-
+    
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Task  $task
+     * @param  \App\Task $task
+     *
      * @return \Illuminate\Http\Response
      */
     public function destroy(Task $task)
     {
-        //
+        $task->delete();
+        
+        return ['message' => 'ok'];
     }
 }
