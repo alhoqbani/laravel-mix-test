@@ -39,11 +39,15 @@
         methods: {
             ...mapActions({
                 addTask: 'addTask',
+                fetchAllTasks: 'fetchAllTasks'
             }),
             pushTask: function () {
                 this.addTask(this.task.body);
                 this.task.body = null;
             }
+        },
+        created() {
+            this.fetchAllTasks();
         }
     }
 </script>
