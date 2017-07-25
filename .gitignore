@@ -1,4 +1,5 @@
 /node_modules
+resources/assets/js/tests/unit/coverage/
 /public/hot
 /public/storage
 /public/css
