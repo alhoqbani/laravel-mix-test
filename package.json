@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "cross-env NODE_ENV=testing karma start --config= resources/assets/js/tests/unit/karma.conf.js --single-run",
+    "test": "cross-env NODE_ENV=testing karma start --config= resources/assets/tests/unit/karma.conf.js --single-run",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
