@@ -16,9 +16,12 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('tasks', require('./components/Tasks.vue'));
+
 import store from './store/index.js'
 
 const app = new Vue({
     el: '#app',
     store
 });
+
