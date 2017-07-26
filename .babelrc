@@ -1,4 +1,10 @@
 {
+  "presets": [
+    "env",
+    "stage-2",
+    "es2016",
+    ["es2015", {"modules": false}]
+  ],
   "env": {
     "test": {
       "plugins": [
