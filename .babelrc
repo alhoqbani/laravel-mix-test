@@ -2,7 +2,11 @@
   "env": {
     "test": {
       "plugins": [
-        ["istanbul"]
+        ["istanbul", {
+          "exclude": [
+            "resources/assets/tests"
+          ]
+        }]
       ]
     }
   }
