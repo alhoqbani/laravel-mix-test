@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Example from '../../../js/components/Example.vue'
 
-const {expect} = require('chai');
-
 Vue.config.productionTip = false;
 
 describe('Example.vue', () => {
