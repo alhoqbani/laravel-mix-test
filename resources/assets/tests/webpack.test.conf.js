@@ -6,7 +6,7 @@ const webpackConfig = merge.smart(mixWebpackConfig, {
     devtool: '#inline-source-map',
     plugins: [
         new webpack.DefinePlugin({
-            'process.env': '"testing"'
+            'process.env': '"test"'
         })
     ]
 });

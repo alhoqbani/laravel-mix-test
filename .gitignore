@@ -1,5 +1,5 @@
 /node_modules
-resources/assets/tests/unit/coverage/
+resources/assets/tests/unit/coverage
 /public/hot
 /public/storage
 /public/css

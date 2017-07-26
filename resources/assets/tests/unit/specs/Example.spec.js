@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Example from '../../../js/components/Example.vue'
 
-const {expect} = require('chai');
-
 Vue.config.productionTip = false;
 
 describe('Example.vue', () => {
@@ -12,6 +10,14 @@ describe('Example.vue', () => {
 
         expect(vm.$el.querySelector('.panel-body').textContent)
             .to.contain('I\'m an example component!')
+    })
+
+    // Evaluate the results of functions in
+    // the raw component options
+    it('sets the correct default data', () => {
+        // expect(Example.data).be.function
+        const defaultData = Example.data()
+        expect(defaultData.message).to.equal('hello!')
     })
 
     // Inspect the component instance on mount
